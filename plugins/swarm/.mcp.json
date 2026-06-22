@@ -1,6 +1,7 @@
 {
-    "mcp_servers": {
+    "mcpServers": {
         "swarmcloud": {
+            "type": "http",
             "url": "https://swarmplatform.cloud/mcp/swarm"
         }
     }
