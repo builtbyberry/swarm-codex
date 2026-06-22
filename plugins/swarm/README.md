@@ -37,7 +37,7 @@ Codex will ask you to trust the plugin hooks on first run (`/hooks`).
 
 - **The MCP connection** registers as `swarmcloud` when the plugin loads, so the `codex mcp login swarmcloud` above works without adding the server by hand.
 - **Context loading is a nudge, not a guarantee.** The `SessionStart` hook only reminds the model to call `get_context_for_injection`; installing the plugin does not by itself load context. The model loads it when it acts on the reminder, or when you ask. For a deterministic load, see Power mode below.
-- **Pick the channel.** This bundle does not hard-map this repo to a Swarm channel, so confirm the active channel each session — ask the model to `list_channels`, or download a channel-pinned copy from the Connect page to bake one in.
+- **Pick the channel.** This bundle does not hard-map this repo to a Swarm channel, so set the active channel each session — tell the model which channel to use, or download a channel-pinned copy from the Connect page to bake one in. The model should not pick a channel on its own from `list_channels`.
 
 ## Power mode (optional)
 

@@ -6,7 +6,7 @@
                 "hooks": [
                     {
                         "type": "command",
-                        "command": "printf '%s' 'Swarm is connected. Before starting work, call the get_context_for_injection MCP tool for the active Swarm channel (confirm it with the user or call list_channels) to load what other sessions already know.'",
+                        "command": "printf '%s' 'Swarm is connected. Before starting work, call the get_context_for_injection MCP tool for the active Swarm channel (confirm it with the user; do not pick one from list_channels yourself) to load what other sessions already know.'",
                         "statusMessage": "Loading Swarm context"
                     }
                 ]

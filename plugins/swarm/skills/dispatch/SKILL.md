@@ -5,7 +5,7 @@ description: Execute a Swarm dispatch run end to end. Use when the user hands yo
 
 # Swarm dispatch worker
 
-A **dispatch** is a scoped task an operator created in Swarm and handed to a local agent — you. You carry it out under the operator's own credentials against the active Swarm channel (confirm it with the user or call `list_channels`), and return a **proposal**: a provisional finding the operator confirms or rejects on the edge. You never write canon directly; your output always lands provisional.
+A **dispatch** is a scoped task an operator created in Swarm and handed to a local agent — you. You carry it out under the operator's own credentials against the active Swarm channel — confirm it with the user (`list_channels` only lists candidates; do not pick one yourself), and return a **proposal**: a provisional finding the operator confirms or rejects on the edge. You never write canon directly; your output always lands provisional.
 
 ## What you need to start
 

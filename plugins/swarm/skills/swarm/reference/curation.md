@@ -14,6 +14,12 @@ Recognizing what to record is proactive; creating the record is not — offer go
 - **not a personal preference** — it is shared canon, not how one person likes to work;
 - **a fit for a record type** — a decision, standard, fact, issue, insight, risk, or task.
 
+The fastest signals to watch for, especially right after a checkpoint:
+
+- **decision** — a choice was made *with a rationale* ("we will lead with X because Y"). The session resolved an open question.
+- **standard** — a rule future work must follow ("copy must show a human moment before product language"; "always/never …").
+- **fact** — a durable truth was established, or one that extends or contradicts an existing record.
+
 Offer the candidates that clear that bar and let the user choose. Skip the offer entirely when the channel's capture mode is Off, or when no human is present (headless runs) — keep it private.
 
 ## Promote vs create

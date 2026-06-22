@@ -5,12 +5,17 @@ description: Set up a new project on Swarm — create its channel and seed it wi
 
 # Onboard a project to Swarm
 
+Onboarding creates ONE new channel and seeds it from the repository in front of you. It never reads from, adopts, or inherits the workspace of another channel.
+
 The onboarding ritual is:
 
-1. Call `list_channels` first — if a channel for this project already exists, stop and use it (do not create a duplicate).
-2. Distill the repository into atomic, typed intelligence records.
-3. If the user belongs to more than one workspace, pick the target workspace.
-4. Call the `onboard_project` tool to create the channel and seed it with those records.
+1. **Take the user's intent literally.** If they named the channel and/or workspace, use those verbatim — do not rename, fuzzy-match, or substitute a similar existing channel.
+2. Call `list_channels` only to guard against an exact duplicate: a channel whose key is the slug of *this* channel's name in the *same* target workspace. A similar or shorter name (e.g. `acme` vs `acme-billing`) is a different project — ignore it. Never call `get_context_for_injection` on another channel during onboarding, and never inherit its workspace.
+3. Distill the repository into atomic, typed intelligence records.
+4. Pick the target workspace: use the one the user named; otherwise, if they belong to more than one, ask — never guess or borrow another channel's workspace.
+5. Call the `onboard_project` tool to create the channel and seed it with those records.
+
+If you are unsure about the channel name or the workspace, ask the user before calling `onboard_project` rather than assuming and continuing.
 
 If your client surfaces MCP prompts, the **`onboard-project` prompt** walks this same ritual interactively and is the canonical, server-rendered source — prefer it when it is available. Some clients do not expose MCP prompts; when the prompt is not available, follow the steps above directly (they call the same `onboard_project` tool).
 

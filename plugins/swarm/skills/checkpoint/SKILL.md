@@ -11,3 +11,13 @@ Checkpoint the current session to its Swarm channel, following the `guidance` fi
 - **Auto** — call `share_session` with `trigger=agent_auto`.
 - **Propose** — ask the user first; if they agree, call `share_session` with `trigger=user_request`.
 - **Off** — keep it private; do not share unless the user explicitly asks.
+
+## Then check for canon
+
+A checkpoint preserves the *session*; the durable knowledge inside it should also become *records*. After sharing (and even when the mode is Off), scan what this session produced for record-worthy canon:
+
+- **decision** — did you make a choice with a rationale? (e.g. "we will lead with X because Y")
+- **standard** — did you set a rule future work must follow? (e.g. "marketing copy must show a human moment before product language")
+- **fact** — did you establish a durable truth, or one that extends or contradicts an existing record?
+
+If a session cleared that bar, name the specific record(s) and offer to promote them with `promote_context_to_record` (it keeps provenance back to this session). Recognizing canon is proactive; creating it is not — offer good candidates and let the user decide. Skip the offer when the capture mode is Off, or when no human is present.

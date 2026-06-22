@@ -5,7 +5,7 @@ The tools available once a client is connected to Swarm, grouped by the loop.
 ## Load context (start of a task)
 
 - `get_context_for_injection` — load what other sessions already know: channel records and your private working context. Returns the channel's resolved `capture_mode` and the end-of-session `guidance`. **Call this first.**
-- `list_channels` — list the channels you can reach. Use it to confirm the active channel.
+- `list_channels` — list the channels you can reach. Use it to **discover** candidates, not to silently pick one; the active channel comes from an explicit binding or the user's choice.
 - `list_recent_sessions` — your own recent private context sessions.
 
 ## Working context (private)
