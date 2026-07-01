@@ -8,6 +8,13 @@ The tools available once a client is connected to Swarm, grouped by the loop.
 - `list_channels` — list the channels you can reach. Use it to **discover** candidates, not to silently pick one; the active channel comes from an explicit binding or the user's choice.
 - `list_recent_sessions` — your own recent private context sessions.
 
+## Fetch on demand
+
+**Fetch on demand** — the ranking already narrowed the channel down to the relevant few, so do not respond to an injection payload by re-querying or filtering it yourself; call `fetch` with a record's id to go deeper on demand. When headline mode is active, injected records come back as a headline + one-line summary rather than the full body. Read headlines first, and fetch a record's full `What`/`Why` only when the task actually needs it. This is deliberate, not a degraded result.
+
+- `fetch` — fetch the full `What`/`Why` text of a single record by id, as returned in a headline or by `search`. Call it per-record, on demand.
+- `search` — search records by keyword, returning lightweight `{id, title, url}` matches. Pair with `fetch` to read a specific match in full.
+
 ## Working context (private)
 
 - `capture_context` — capture a private working note inside a channel. Stays yours until shared or promoted.
